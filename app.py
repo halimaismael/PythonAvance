@@ -108,9 +108,13 @@ def remove_product(id):
 # =========================
 # ERROR TEST
 # =========================
+#@app.route("/error-test")
+#def error_test():
+#    1 / 0  # 💥 Sentry capture
+
 @app.route("/error-test")
 def error_test():
-    1 / 0  # 💥 Sentry capture
+    return "Erreur corrigée"
 
 # =========================
 # RUN
